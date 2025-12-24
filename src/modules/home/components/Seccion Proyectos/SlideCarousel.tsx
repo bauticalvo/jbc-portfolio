@@ -10,13 +10,11 @@ export const SlideCarousel = () => {
   const x = useMotionValue(0)
   const navigate = useNavigate()
 
-  // Sincronizar el índice de los puntos con el drag
   useEffect(() => {
     const updateIndex = () => {
       const currentX = x.get()
       if (maxScroll === 0) return
-      // Calculamos el índice basado en cuánto hemos arrastrado
-      const index = Math.round(Math.abs(currentX) / (carouselRef.current?.offsetWidth! / 2))
+      const index = Math.round(Math.abs(currentX) / (carouselRef.current?.offsetWidth! / 4))
       setCurrentIndex(index)
     }
 
@@ -26,7 +24,6 @@ export const SlideCarousel = () => {
 
   useEffect(() => {
     if (carouselRef.current) {
-      // El scroll máximo es el ancho total menos lo que se ve en pantalla
       setMaxScroll(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth)
     }
   }, [])
@@ -37,7 +34,6 @@ export const SlideCarousel = () => {
 
   return (
     <div className="relative w-full flex flex-col items-center gap-8">
-      {/* 🟢 Contenedor del Carrusel */}
       <div className="relative w-full overflow-hidden border-y border-black/10 py-10">
         <motion.div
           ref={carouselRef}
@@ -50,28 +46,31 @@ export const SlideCarousel = () => {
           {slides.map((slide, index) => (
             <motion.div
               key={`${slide.url}-${index}`}
-              className="shrink-0 w-1/3 px-4" // 👈 w-1/2 para que se vean exactamente 2
+              className="shrink-0 w-[30vw] px-2" 
             >
-              <div className="w-full h-[50vh] flex flex-col bg-secondary border border-black overflow-hidden group">
-                <div className="w-full h-[70%] flex items-center justify-center bg-secondary border-b border-black p-6">
+              <div className="w-full h-[70vh] 2xl:h-[50vh] flex flex-col  overflow-hidden group">
+                <div className="w-full h-full flex items-center justify-center bg-dark-grey  relative">
                   <img
                     src={slide.url}
                     alt={slide.url}
-                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 select-none"
+                    className="w-full h-full object-cover grayscale-0 group-hover:grayscale transition-all duration-500"
                     draggable="false"
                   />
-                </div>
+                  <section className='absolute top-4 left-4 flex space-x-2'>
+                  {
+                    slide.label.map((labelItem, labelIndex) => (
+                      <span 
+                        key={`${labelItem}-${labelIndex}`}
+                        className=" bg-dark-grey text-primary text-xs font-bold p-2 "
+                      >{labelItem}</span>
+                    ))
+                  }
+                  </section>
+                  <section className='absolute bottom-0 left-0 w-full bg-linear-to-t  from-secondary via-secondary  to-transparent p-4 text-primary'>
+                    <h2 >TITULO</h2>
+                    <p className='group-hover:opacity-100 opacity-0'>Texto Descriptivo</p>
+                  </section>
 
-                <div className="flex flex-col justify-between h-[30%] p-6">
-                  <h3 className="text-black font-black uppercase text-lg tracking-tighter">
-                    {slide.label.join(" / ")}
-                  </h3>
-                  <button
-                    onClick={() => handleDetail(slide.url as string)}
-                    className="self-start border border-black px-6 py-2 text-xs font-bold uppercase hover:bg-accent hover:text-secondary transition-all"
-                  >
-                    Explorar Proyecto
-                  </button>
                 </div>
               </div>
             </motion.div>
@@ -79,11 +78,8 @@ export const SlideCarousel = () => {
         </motion.div>
       </div>
 
-      {/* 🔵 Indicadores (Dots) */}
       <div className="flex gap-6">
         {slides.map((_, index) => {
-          // Lógica para que solo se marquen los puntos que representan los "pares"
-          // O todos, si prefieres navegación individual
           return (
             <div
               key={index}

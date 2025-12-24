@@ -9,6 +9,7 @@ export const HomeScreen = () => {
             {/* <InfiniteLogos /> */}
             <div className="h-screen"></div>
            <ProjectsSection />
+            <div className="h-screen"></div>
         </div>
     )
 }

@@ -24,7 +24,7 @@ export const InfoSection = ({triggerRef }: Props) => {
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "+=1000",
+          end: "+=100%",
           scrub: true,
           pin: true,
         },
