@@ -6,8 +6,8 @@ export const HomeScreen = () => {
     return (
         <div className="text-primary flex flex-col h-auto w-full">
            <HeroSection />
-            {/* <InfiniteLogos /> */}
             <div className="h-screen"></div>
+            {/* <InfiniteLogos /> */}
            <ProjectsSection />
             <div className="h-screen"></div>
         </div>

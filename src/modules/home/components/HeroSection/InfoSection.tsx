@@ -49,8 +49,8 @@ export const InfoSection = ({triggerRef }: Props) => {
                         <h1>crear.</h1>
                         <h1>impactar.</h1>
                     </div>
-                    <p className="w-1/2 text-xl">
-                        Construyo identidades que trasciendan la pantalla. Mi enfoque integra la creación de sistemas visuales,
+                    <p className="w-1/2 text-2xl">
+                       <span className="text-lg">00. </span> Construyo identidades que trasciendan la pantalla. Mi enfoque integra la creación de sistemas visuales,
                         branding y experiencias digitales, enfocados en la experiencia del usuario.
                         {/* No solo diseño interfaces, doy vida a marcas coherentes que nacen desde un concepto gráfico sólido y evolucionan hasta convertirse en experiencias digitales de alto impacto. */}
                     </p>
