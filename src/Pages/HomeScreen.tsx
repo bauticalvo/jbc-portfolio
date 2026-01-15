@@ -1,14 +1,14 @@
-import { HeroSection } from "../modules/home/components/HeroSection/HeroSection"
-import { InfiniteLogos } from "../modules/home/components/HeroSection/LogoCarousel"
-import { ProjectsSection } from "../modules/home/components/Seccion Proyectos/ProjectsSection"
+import { HeroLayout } from "../modules/home/components/HeroSection/HeroLayout"
+import UpdateHeroSection from "../modules/home/components/HeroSection/HeroSection2"
+import NewProjectsSection from "../modules/home/components/Seccion Proyectos/NewProjectsSection"
 
 export const HomeScreen = () => {
     return (
         <div className="text-primary flex flex-col h-auto w-full">
-           <HeroSection />
+            <HeroLayout />
             <div className="h-screen"></div>
-            {/* <InfiniteLogos /> */}
-           <ProjectsSection />
+            <NewProjectsSection />
+           {/* <ProjectsSection /> */}
             <div className="h-screen"></div>
         </div>
     )
