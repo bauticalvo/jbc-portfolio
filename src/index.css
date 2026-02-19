@@ -93,8 +93,6 @@
   --color-dark-grey: #0d0d0d;
   --color-border-grey: rgba(61, 61, 61, 0.4);
   --color-accent: #F0EFD6;
-  --color-emerald-astute: #11d452;
-  --color-violet-innovation: #8b5cf6;
   --color-noir-black: #000000;
   --color-stark-white: #ffffff;
 
@@ -111,6 +109,9 @@
     display: none;            /* Chrome, Safari, Opera */
   }
 }
+html, body {
+  overflow-x: hidden;
+}
 
 h1{
   font-weight: 900;
@@ -123,7 +124,7 @@ button{
 
 @layer base {
   body {
-    @apply bg-noir-black  text-stark-white selection:bg-emerald-astute selection:text-noir-black;
+    @apply bg-noir-black  text-stark-white selection:bg-accent selection:text-noir-black;
   }
 }
 
@@ -135,7 +136,7 @@ button{
 
 
 .glitch-hover:hover {
-  text-shadow: 2px 0 theme('colors.violet-innovation'), -2px 0 theme('colors.emerald-astute');
+  text-shadow: 2px 0 theme('colors.accent'), -2px 0 theme('colors.accent');
 }
 
 .bento-card {
@@ -143,7 +144,7 @@ button{
 }
 
 .bento-card:hover {
-  @apply border-emerald-astute/50;
+  @apply border-accent/50;
 }
 
 
@@ -173,4 +174,26 @@ button{
 }
 ::-webkit-scrollbar-thumb:hover { 
   background: var(--color-accent); 
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh; /* full viewport height */
+  display: block;
+  position: relative; /* allow content below the canvas */
+  z-index: 0;
+}
+.overlay-heading {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 75px;
+  z-index: 1; /* above canvas */
+  pointer-events: none; /* this is important as it ensures that the effect works under the heading */
 }
