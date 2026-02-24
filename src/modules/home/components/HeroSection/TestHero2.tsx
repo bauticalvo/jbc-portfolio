@@ -88,7 +88,7 @@ const UpdateHeroSection = () => {
 
         </section>
         {/* Lado Izquierdo */}
-        <div className=" text-right mix-blend-difference bg-white/30 backdrop-blur-3xl p-20">
+        <div className=" text-right mix-blend-difference  p-20 glass-card">
           <span className="text-[10px] tracking-[0.4em] text-white uppercase block mb-6 opacity-70">Core Engineering</span>
           <h1 className="text-8xl md:text-[11rem] font-bold text-white leading-[0.75] tracking-tighter">
             WEB<br />DEV
