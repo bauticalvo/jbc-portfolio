@@ -3,13 +3,13 @@ import React from 'react';
 const NewProjectsSection: React.FC = () => {
   return (
     <section className="py-32 px-10 md:px-24 bg-noir-black border-y border-white/5" id="work">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 text-accent">
         <div>
-          <span className="text-accent font-mono text-xs tracking-[0.5em] uppercase mb-4 block">
-            Selected Works
+          <span className=" font-mono text-xs tracking-[0.5em] uppercase mb-4 block">
+            Obras Seleccionadas
           </span>
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">
-            Featured<br/><span className="text-white/20">Projects</span>
+            Proyectos<br/><span className="text-surface">Destacados</span>
           </h2>
         </div>
         <p className="text-gray-500 max-w-xs font-light">
@@ -22,24 +22,23 @@ const NewProjectsSection: React.FC = () => {
         <div className="col-span-12 md:col-span-8 bento-card min-h-[500px] group">
           <img
             alt="Project Image"
-            className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW9H4dt3NHsszUdaqfrqVYH2NhKuZ_AyFu9UXsE30gWBcSDssOqK_pHlmJ7u6k0jmgUh2SBo_YwvY4FHc01wqGBrcYcp0_8tcGt26tCeySQ-MxMHYQj0tgJ6sGanuASMSWBTzFx4Oavlshs4wmwRP3FYx26g_OkvWSv12cZIq0PlREVZBmepQ3L3-gxixNCNerZ6qruykqUob3UFD6bqlPtn-il2yEqsqIIPODc8EJSXTWwWCB585aF2sWO25BhAxGDJmMLGhpmg"
+            className="absolute inset-0 w-full h-full object-contain object-top opacity-50 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+            src='/images/mockup-ser-apple.png'
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-noir-black via-noir-black/40 to-transparent p-10 flex flex-col justify-end">
+          <div className="absolute inset-0 bg-gradient-to-t from-noir-black via-noir-black/30 to-transparent p-10 flex flex-col justify-end">
             <span className="text-accent font-mono text-xs mb-4">01. ARCHIVE</span>
             <h3 className="text-4xl font-black uppercase mb-4">The Monolith Interface</h3>
             <p className="text-gray-300 max-w-md mb-8 leading-relaxed">
               A high-performance dashboard for institutional data visualization. Built with extreme attention to load speeds and visual hierarchy.
             </p>
-            <a className="inline-flex items-center gap-4 group/btn" href="#">
-              <span className="text-[10px] font-black uppercase tracking-widest group-hover/btn:text-accent transition-colors">
+            <button className="inline-flex items-center gap-4 group/btn">
+              <span className="text-[10px] font-black uppercase tracking-widest group-hover/btn:text-accent transition-all">
                 View Case
               </span>
               <div className="h-px w-12 bg-white group-hover/btn:bg-accent group-hover/btn:w-20 transition-all"></div>
-            </a>
+            </button>
           </div>
         </div>
-
         {/* Project 2 */}
         <div className="col-span-12 md:col-span-4 bento-card group">
           <div className="p-10 flex flex-col h-full">
@@ -49,11 +48,14 @@ const NewProjectsSection: React.FC = () => {
               Complete rebranding for a boutique AI firm focused on transparency. Visual systems inspired by brutalist architecture.
             </p>
             <div className="mt-auto">
+              <div className="relative ">
               <img
                 alt="Project"
-                className="w-full aspect-square object-cover mb-8 filter grayscale hover:grayscale-0 transition-all duration-500"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxb7lYAY29d5UiXeWWiwPfSWvAz-8mTaqXvgkj21nKDBwoLnYVpTk5SZodxTOfsDbNiREGUaYTnbBG2Img2cWKFAs8qawb82U1kLSgPhEDE2vtPICTdwvJX8yDe2M-xlKpToFegoU1drFh9T-w4L2tPYU5mE_2udJzm3zS9REEDYmbd79G48PQ_T_P81AD0MQplVduWgvi4AL0iIhOazqj50danHdFawgPdM1R2kt_soctY8Gzj2pJtjmh3HbhUbq1YVjJTSHPHg"
-              />
+                className="w-full aspect-square object-cover mb-8 filter grayscale group-hover:grayscale-0 transition-colors duration-500 relative"
+                src='/logos/tifosi-square.jpg'
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-noir-black via-noir-black/30 group-hover:from-noir-black/90 group-hover:via-noir-black/0 transition-colors duration-700 to-transparent p-10 flex flex-col justify-end"></div>
+              </div>
               <button className="w-full border border-white/20 py-4 text-[10px] font-black uppercase tracking-widest hover:border-accent hover:text-accent transition-all">
                 View Case
               </button>
@@ -81,22 +83,21 @@ const NewProjectsSection: React.FC = () => {
             <img
               alt="Background"
               className="w-full h-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA28fic2YDHVz7pDiEglWKlCwIem2Yd05WRB6nNobveUapBae27KEw8D6k9DOvlb2bTcsh9RvyAIzwoV2lk2e7XVEPmBgXaHLfIbk3TItXEJdHigUJX99YYY1KHTGursOiGm1lc2CAgo6uxsVDbnV6V_SlT3h3QoKYpGFTb7mkFKA34IJfdH9BkuLcfpfYQKFfg5d6968v2BkoWA_wSI2jccojYK6nSu0XBowrmoAeTIIv2YFEvf8zRnEMeJMSEMD5F0b743MKNew"
+              src='/images/mockup-vitam-web.png'
             />
           </div>
           <div className="relative z-10 p-12 flex flex-col justify-between h-full">
             <div className="flex justify-between items-start">
-              <span className="text-noir-black font-mono text-xs font-bold tracking-widest uppercase">
+              <span className="text-accent font-mono text-xs font-bold tracking-widest uppercase">
                 04. EXPERIMENT
               </span>
-              <span className="text-accent font-black text-4xl">/04</span>
             </div>
             <div>
-              <h3 className="text-4xl font-black uppercase text-noir-black mb-4">Kinetic Typography</h3>
+              <h3 className="text-4xl font-black uppercase text-primary mb-4">Kinetic Typography</h3>
               <p className="text-gray-500 max-w-sm mb-6">
                 Exploring the intersection of motion and readability in immersive web environments.
               </p>
-              <button className="bg-noir-black text-stark-white px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-accent transition-all">
+              <button className="button-glass  px-8 py-3 text-[10px] font-black uppercase tracking-widest  transition-all">
                 Launch Lab
               </button>
             </div>
@@ -105,13 +106,13 @@ const NewProjectsSection: React.FC = () => {
       </div>
 
       {/* Method Section */}
-      <section className="py-32 bg-stark-white text-noir-black px-10 md:px-24 mt-20">
+      <section className="py-32 bg-surface text-accent px-10 md:px-24 mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
           <div className="lg:col-span-1">
             <h2 className="text-6xl font-black uppercase tracking-tighter leading-none mb-8">
               The<br/>Method
             </h2>
-            <p className="text-gray-500 text-lg leading-relaxed">
+            <p className="text-primary text-lg leading-relaxed">
               We believe in the tension between radical innovation and rigorous structure. Our process is a dance between light and shadow.
             </p>
           </div>
@@ -121,7 +122,7 @@ const NewProjectsSection: React.FC = () => {
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-4">
                 Astute Reliability
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-primary text-sm">
                 Every line of code is optimized for extreme performance and future-proof scalability.
               </p>
             </div>
@@ -130,7 +131,7 @@ const NewProjectsSection: React.FC = () => {
               <p className="text-xs font-mono uppercase tracking-widest text-accent mb-4">
                 Innovative Disruption
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-primary text-sm">
                 Pushing creative boundaries to ensure your brand stands apart in a saturated market.
               </p>
             </div>

@@ -93,6 +93,7 @@
   --color-dark-grey: #0d0d0d;
   --color-border-grey: rgba(61, 61, 61, 0.4);
   --color-accent: #F0EFD6;
+  --color-surface: #706F56;
   --color-noir-black: #000000;
   --color-stark-white: #ffffff;
 
@@ -114,14 +115,17 @@ html, body {
   cursor: none ;
 }
 
+button{
+  cursor: none ;
+}
+button:hover {
+  cursor: none ;
+}
+
 h1{
   font-weight: 900;
 }
 
-button{
-  cursor: none ;
-
-}
 
 
 @layer base {
@@ -209,4 +213,20 @@ button{
 
   padding: 20px;
   color: white; 
+}
+
+.button-glass {
+  background-color: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(2px); 
+  -webkit-backdrop-filter: blur(70px);
+  padding: 10px 20px;
+  color: white; 
+  border: none;
+  border-radius: 0 10px 0px 10px;
+}
+
+
+:hover.button-glass {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: var(--color-accent);
 }

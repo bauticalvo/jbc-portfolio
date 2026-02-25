@@ -57,17 +57,17 @@ export const HeroSection: React.FC<Props> = ({ ref }) => {
                 }}
             />
 
-            <section className="absolute top-1/2 left-1/2 h-full flex flex-col justify-center items-center md:items-start -translate-x-1/2 -translate-y-1/2 space-y-2 pointer-events-none glass-bg w-full pt-[10vh] pb-6 px-4 mix-blend-difference">
-                <div className="text-right flex flex-col justify-end items-end mix-blend-difference h-1/2 p-20 ">
+            <section className="absolute top-1/2 left-1/2 h-full flex flex-col justify-center items-center md:items-start -translate-x-1/2 -translate-y-1/2 space-y-20 md:space-y-0 pointer-events-none glass-bg w-full pt-[10vh] pb-6 px-4 mix-blend-difference">
+                <div className="text-right flex flex-col justify-end items-end mix-blend-difference h-1/2 w-full p-6 2xl:p-20 ">
                     <span className="text-[10px] tracking-[0.4em] text-accent uppercase block mb-6 opacity-70">Core Engineering</span>
-                    <h1 className="text-7xl md:text-[11rem] font-bold text-accent leading-[0.75] tracking-tighter">
+                    <h1 className="text-7xl md:text-9xl lg:text-[11rem] font-bold text-accent leading-[0.75] tracking-tighter">
                         WEB<br />DEV
                     </h1>
                 </div>
 
-                <div className="flex flex-col  text-left mix-blend-difference h-1/2  xl:p-20">
+                <div className="flex flex-col  text-left mix-blend-difference h-1/2 w-full p-6 2xl:p-20">
                     <span className="text-[10px] tracking-[0.4em] text-accent uppercase block mb-6 opacity-70">Visual Logic</span>
-                    <h1 className="text-7xl  md:text-[11rem] font-bold text-accent leading-[0.75] tracking-tighter">
+                    <h1 className="text-7xl md:text-9xl lg:text-[11rem] font-bold text-accent leading-[0.75] tracking-tighter">
                        UX-UI <br />DESIGNER
                     </h1>
                 </div>
