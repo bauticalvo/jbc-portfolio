@@ -106,9 +106,9 @@ const NewProjectsSection: React.FC = () => {
       </div>
 
       {/* Method Section */}
-      <section className="py-32 bg-surface text-accent px-10 md:px-24 mt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
-          <div className="lg:col-span-1">
+      <section className="py-32 backdrop-invert-10 rounded-3xl text-accent px-10 md:px-24 mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 ">
+          <div className="lg:col-span-1   ">
             <h2 className="text-6xl font-black uppercase tracking-tighter leading-none mb-8">
               The<br/>Method
             </h2>

@@ -94,6 +94,7 @@
   --color-border-grey: rgba(61, 61, 61, 0.4);
   --color-accent: #F0EFD6;
   --color-surface: #706F56;
+  --color-noir: #1e1d03;
   --color-noir-black: #000000;
   --color-stark-white: #ffffff;
 
@@ -205,6 +206,8 @@ h1{
   padding: 20px;
   color: white; 
 }
+
+
 .glass-card {
   background-color: rgba(255, 255, 255, 0.1); 
   
